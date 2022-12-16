@@ -1,8 +1,8 @@
 scripts.day15_1 = async () => {
     /** @type {string} */ 
-    let data = (await getFile('day15/small.txt'));
+    let data = (await getFile('day15/input.txt'));
     
-    const checkHeight = 10;
+    const checkHeight = 2000000;
     const point = (x = 0, y = 0) => ({ x, y, key: `${x},${y}` });
     const horizontalLine = (x1 = 0, x2 = 0) => {
         let range = {
