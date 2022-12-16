@@ -1,8 +1,8 @@
 scripts.day15_1 = async () => {
     /** @type {string} */ 
-    let data = (await getFile('day15/input.txt'));
+    let data = (await getFile('day15/small.txt'));
     
-    const checkHeight = 2000000;
+    const checkHeight = 10;
     const point = (x = 0, y = 0) => ({ x, y, key: `${x},${y}` });
     const horizontalLine = (x1 = 0, x2 = 0) => {
         let range = {
@@ -15,7 +15,7 @@ scripts.day15_1 = async () => {
             length: () => range.to - range.from + 1,
             has: (x = 0) => range.from < x && x < range.to,
             join: (other = horizontalLine()) => {
-                if (other.range.from > range.to || other.range.to < range.fromX) return false;
+                if (other.range.from > range.to || other.range.to < range.from) return false;
                 
                 let coords = [other.range.from, other.range.to, range.from, range.to];
                 range.from = Math.min(...coords);
