@@ -1,6 +1,6 @@
 scripts.day17_1 = async () => {
     /** @type {string} */ 
-    const data = (await getFile('day17/small.txt'));
+    const data = (await getFile('day17/input.txt'));
 
     const width = 7;
     const fromLeft = 2;
