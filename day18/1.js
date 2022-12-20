@@ -1,6 +1,6 @@
 scripts.day18_1 = async () => {
     /** @type {string} */ 
-    const data = (await getFile('day18/3x3.txt'));
+    const data = (await getFile('day18/input.txt'));
     const grid = new Set();
 
     const point = (x = 0, y = 0, z = 0) => ({ x, y, z });
